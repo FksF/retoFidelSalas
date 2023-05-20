@@ -1,0 +1,35 @@
+@import 'src/assets/colors';
+
+.back {
+  background-image: url('./../../../../../assets/images/Background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.primary {
+  background-color: $primary !important;
+  color: white !important;
+}
+
+.txtMenu {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black-menu;
+}
+
+.descriptionTitle {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.025em;
+  color: $black-menu;
+}
+
+.descriptionComment {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $black-two;
+}
