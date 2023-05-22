@@ -1,31 +1,27 @@
 <div class="row m-0">
-  <div class="col bg-pic"></div>
+  <div class="col bg-pic d-none d-sm-block"></div>
   <div class="col d-flex flex-column align-items-cente justify-content-center">
-    <form class="d-flex flex-column p-5">
+    <form [formGroup]="myForm" class="d-flex flex-column p-5">
       <h5>Bienvenido</h5>
       <h1 class="title fs-3">Inicia sesión</h1>
       <mat-form-field appearance="outline">
         <mat-label>Correo electrónico</mat-label>
-        <input matInput name="email">
+        <input matInput formControlName="email" name="email">
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Contraseña</mat-label>
-        <input matInput [type]="showPassword ? 'text' : 'password'" name="password">
+        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" name="password">
         <mat-icon matSuffix (click)="togglePasswordVisibility()">
           {{showPassword?'visibility_off':'visibility'}}
         </mat-icon>
       </mat-form-field>
       <a href="" class="txtSpan">¿Olvidaste tu contraseña?</a>
       <mat-checkbox>Recordar correo</mat-checkbox>
-      <button mat-flat-button class="mx-5 my-4 primary rounded" (click)="doLogin()">Ingresar</button>
-      <button mat-flat-button class="mx-5 rounded btnBlack">
-        <img src="./assets/images/ico_google.svg" class="my-1 mx-2" alt="logo">
-        Ingresar con google
-      </button>
     </form>
-
-
-
-
+    <button mat-flat-button class="mx-5 my-4 primary rounded" [disabled]="myForm.invalid" (click)="doLogin()">Ingresar</button>
+    <button mat-flat-button class="mx-5 rounded btnBlack">
+      <img src="./assets/images/ico_google.svg" class="my-1 mx-2" alt="logo">
+      Ingresar con google
+    </button>
   </div>
 </div>

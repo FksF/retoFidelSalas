@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 
 const matDialogConfig = new MatDialogConfig();
 matDialogConfig.maxWidth = '90vw';
@@ -41,6 +42,7 @@ const modules = [
   MatCheckboxModule,
   MatTabsModule,
   MatListModule,
+  MatTableModule
 ];
 
 @NgModule({

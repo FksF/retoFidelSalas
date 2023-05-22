@@ -9,13 +9,11 @@ import { SharedService } from 'src/app/shared/services/shared.service';
 })
 export class LandingComponent {
 
-  constructor( private sharedService: SharedService) {
+  constructor( private sharedService: SharedService ) {
 
   }
 
   goToLogin() {
     this.sharedService.navigateToExternalUrl(Routes.login);
-    console.log('Deberia');
-    
   }
 }

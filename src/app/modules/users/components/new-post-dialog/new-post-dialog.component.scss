@@ -1,0 +1,14 @@
+@import 'src/assets/colors';
+
+.primary {
+  background-color: $primary !important;
+  color: white !important;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+}
+
+::ng-deep .mat-mdc-dialog-actions {
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+<h1 mat-dialog-title class="fs-6 fw-semibold mx-5">Crear Post</h1>
+<div mat-dialog-content class="px-5">
+  <form [formGroup]="myForm" class="d-flex flex-column justify-content-center align-items-center w-100">
+    <mat-form-field appearance="outline" class="w-100 mx-md-5 px-md-5">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-100 mx-md-5 px-md-5">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="mx-auto text-center">
+  <button mat-flat-button class="mx-5 my-4 primary rounded" [disabled]="myForm.invalid" (click)="onSubmit()">
+    Guardar
+    <span *ngIf="loader" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  </button>
+</div>

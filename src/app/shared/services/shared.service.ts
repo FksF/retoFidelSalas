@@ -15,11 +15,7 @@ export class SharedService {
   public navigateToExternalUrl = (url: string) => { this.redirect(url); };
 
   public navigateToComponent(route: Routes, params?: any): void {
-    console.log('llego');
-    
     this.ngZone.run(() => {
-      console.log('inside', route);
-      
       this.router.navigate([route], { queryParams: {paramsKey: params} });
     });
   }
