@@ -11,7 +11,7 @@ export class UsersService {
   public usersList: Users[] = [];
 
   private serviceUrl: string = 'https://jsonplaceholder.typicode.com';
-
+  
   constructor(  private http: HttpClient ) { }
 
   public getUsers(): Observable<Users[]> {
